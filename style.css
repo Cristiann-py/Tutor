@@ -129,3 +129,22 @@ h1 {
 .back-button:hover {
   background-color: #555;
 }
+
+iframe.hidden {
+  display: none;
+  /* Hidden by default */
+}
+
+iframe {
+  width: 100%;
+  /* Responsive width */
+  height: 800px;
+  /* Adjust height as necessary */
+  border: none;
+  /* Remove default border */
+}
+
+/* When visible class is added, display it */
+iframe.visible {
+  display: block;
+}
