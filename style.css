@@ -13,7 +13,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'American Typewriter', serif;
+  font-family: 'Donegal One';
   width: 100%;
   height: 100%;
   overflow-x: hidden;
@@ -80,9 +80,10 @@ h1 {
   text-align: center;
   color: #fff;
   border: .2rem solid #fff;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: bold;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .split.left .button:hover,
@@ -114,7 +115,7 @@ h1 {
   padding: 10px 20px;
   background-color: #333;
   color: #fff;
-  font-family: 'American Typewriter', serif;
+  font-family: 'Donegal One';
   border: none;
   cursor: pointer;
   font-size: 16px;
@@ -125,7 +126,7 @@ h1 {
 }
 
 iframe.hidden {
-  display: none;  
+  display: none;
 }
 
 iframe {
@@ -149,7 +150,7 @@ iframe {
   margin-bottom: 10px;
   background-color: #333;
   color: #fff;
-  font-family: 'American Typewriter', serif;
+  font-family: 'Donegal One';
   border: none;
   cursor: pointer;
   font-size: 16px;
