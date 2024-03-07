@@ -23,20 +23,37 @@
   <!-- New content sections -->
   <div id="tutoring-content" class="content-section hidden">
     <h2>Tutoring Services</h2>
-    <!-- Google Form Iframe -->
-    <iframe id="tutoring-form"
-      src="https://docs.google.com/forms/d/e/1FAIpQLSdjao8fez9Z1iDQLS95uegsjw4J8NZOyV6SDeQyZVihOhLo9g/viewform?embedded=true"
-      width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0" class="hidden">Loading…</iframe>
-    <button class="back-button" id="back-from-tutoring">Back</button>
+      <!-- Google Form Iframe -->
+      <iframe id="tutoring-form"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdjao8fez9Z1iDQLS95uegsjw4J8NZOyV6SDeQyZVihOhLo9g/viewform?embedded=true"
+        width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0" class="hidden">Loading…</iframe>
+      <button class="back-button" id="back-from-tutoring">Back</button>
   </div>
   <div id="about-me-content" class="content-section hidden">
     <h2>About Me</h2>
-    <!-- Example content -->
     <p>Hello! My name is Cristian Hudson, and I am a Junior at Crescenta Valley High School. I am passionate about STEM
-      Subjects and hope I can transfer a bit of that excitement into those I tutor</p>
-    <button class="back-button" id="back-from-about-me">Back</button>
-  </div>
-  <script src="script.js"></script>
-</body>
+      Subjects and hope I can transfer a bit of that excitement into those I tutor.</p>
 
-</html>
+    <div class="sidebar">
+      <button class="tab-button" data-for-tab="1">Photos</button>
+      <button class="tab-button" data-for-tab="2">Background Information</button>
+      <button class="tab-button" data-for-tab="3">Experience</button>
+      <button class="tab-button" data-for-tab="4">Resume</button>
+    </div>
+    <div class="content-area">
+      <div class="tab-content visible" id="tab-1">
+        <img src="img/Collage.jpg" alt="Collage of Photos">
+      </div>
+      <div class="tab-content" id="tab-2">
+        <p>Background information content goes here.</p>
+      </div>
+      <div class="tab-content" id="tab-3">
+        <p>Experience content goes here.</p>
+      </div>
+      <div class="tab-content" id="tab-4">
+        <iframe src="https://resume.creddle.io/embed/8yqcz5si7mu" seamless></iframe>
+      </div>
+      <button class="back-button" id="back-from-about-me">Back</button>
+    </div>
+    <script src="script.js"></script>
+</body>

@@ -1,39 +1,77 @@
-const tutoringReadMore = document.getElementById('tutoring-read-more');
-const tutoringContent = document.getElementById('tutoring-content');
-const tutoringFormIframe = document.getElementById('tutoring-form');
-const backFromTutoring = document.getElementById('back-from-tutoring');
-const aboutMeReadMore = document.getElementById('about-me-read-more');
-const aboutMeContent = document.getElementById('about-me-content');
-const backFromAboutMe = document.getElementById('back-from-about-me');
-const container = document.querySelector('.container');
+document.addEventListener('DOMContentLoaded', function() {
+  const tutoringReadMore = document.getElementById('tutoring-read-more');
+  const tutoringContent = document.getElementById('tutoring-content');
+  const tutoringFormIframe = document.getElementById('tutoring-form');
+  const backFromTutoring = document.getElementById('back-from-tutoring');
+  const aboutMeReadMore = document.getElementById('about-me-read-more');
+  const aboutMeContent = document.getElementById('about-me-content');
+  const backFromAboutMe = document.getElementById('back-from-about-me');
+  const container = document.querySelector('.container');
 
-// Event listener for "Read More" on Tutoring
-tutoringReadMore.addEventListener('click', function(event) {
-  event.preventDefault();
-  tutoringContent.classList.add('visible');
-  tutoringFormIframe.classList.remove('hidden'); // Make the iframe visible
-  container.style.display = 'none'; // Hide the split view
+  tutoringReadMore.addEventListener('click', function(event) {
+    event.preventDefault();
+    tutoringContent.classList.add('visible');
+    tutoringFormIframe.classList.remove('hidden');
+    container.style.display = 'none';
+  });
+
+  backFromTutoring.addEventListener('click', function() {
+    tutoringContent.classList.remove('visible');
+    tutoringFormIframe.classList.add('hidden');
+    container.style.display = 'flex';
+  });
+
+  aboutMeReadMore.addEventListener('click', function(event) {
+    event.preventDefault();
+    aboutMeContent.classList.add('visible');
+    container.style.display = 'none';
+  });
+
+  backFromAboutMe.addEventListener('click', function() {
+    aboutMeContent.classList.remove('visible');
+    container.style.display = 'flex';
+  });
+  const buttons = document.querySelectorAll('.tab-button');
+  const contents = document.querySelectorAll('.tab-content');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', function() {
+      const tabId = this.getAttribute('data-for-tab');
+      const tabToShow = document.getElementById(`tab-${tabId}`);
+
+      contents.forEach(content => {
+        content.classList.remove('visible');
+      });
+
+      tabToShow.classList.add('visible');
+    });
+  });
+
+  // Back button logic to show the collage again and hide content boxes
+  const backButton = document.getElementById('back-from-about-me');
+  backButton.addEventListener('click', function() {
+    contentBoxes.forEach(box => {
+      box.classList.add('hidden');
+    });
+    collageImage.classList.remove('hidden');
+  });
 });
 
-// Event listener for "Back" on Tutoring content
-backFromTutoring.addEventListener('click', function() {
-  tutoringContent.classList.remove('visible');
-  tutoringFormIframe.classList.add('hidden'); // Hide the iframe again
-  container.style.display = 'flex'; // Show the split view
-});
 
-// Event listener for "Read More" on About Me
-aboutMeReadMore.addEventListener('click', function(event) {
-  event.preventDefault();
-  aboutMeContent.classList.add('visible');
-  container.style.display = 'none'; // Hide the split view
-});
 
-// Event listener for "Back" on About Me content
-backFromAboutMe.addEventListener('click', function() {
-  aboutMeContent.classList.remove('visible');
-  container.style.display = 'flex'; // Show the split view
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 document.getElementById('tutoring-read-more').addEventListener('click', function(event) {
