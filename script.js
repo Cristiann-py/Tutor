@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Back button logic to show the collage again and hide content boxes
   const backButton = document.getElementById('back-from-about-me');
   backButton.addEventListener('click', function() {
-    contentBoxes.forEach(box => {
+    contents.forEach(box => {
       box.classList.add('hidden');
     });
     collageImage.classList.remove('hidden');

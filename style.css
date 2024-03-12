@@ -14,6 +14,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Racing Sans One", sans-serif;
+  font-size: 100%;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
@@ -43,6 +44,7 @@ body {
 .container:hover .split:hover {
   width: var(--hover-width);
   opacity: 1;
+  font-size: 200%
 }
 
 .split.left {
@@ -65,7 +67,6 @@ h1,
 }
 
 h1 {
-  font-size: 5rem;
   color: #333;
   top: 20%;
   white-space: nowrap;
@@ -147,23 +148,23 @@ iframe {
 .tab-button {
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 4px;
   margin-bottom: 10px;
-  background-color: #333;
-  color: #fff;
+  text-align: center;
+  color: #333;
   font-family: "Anta", sans-serif;
-  border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 100%;
+  white-space: wrap;
 }
 
 .tab-button:hover {
-  background-color: #333;
+  background-color: #fff;
 }
 
 .content-area {
   float: right;
-  width: 70%;
+  width: 75%;
   padding: 2px;
 }
 
@@ -171,7 +172,6 @@ iframe {
   font-family: "BioRhyme", serif;
   display: none;
   padding: 1%;
-  border: 1px solid #ddd;
   margin-top: 1%;
 }
 
