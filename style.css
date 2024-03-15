@@ -188,6 +188,7 @@ iframe {
   float: bottom;
   height: 75%;
   padding: 2px;
+  size-adjust: relative;
 }
 
 .tab-content {
@@ -195,6 +196,7 @@ iframe {
   display: none;
   padding: 1%;
   margin-top: 1%;
+  size: relative;
 }
 
 .tab-content.visible {
